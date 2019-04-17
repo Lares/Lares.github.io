@@ -1,0 +1,28 @@
+body {
+    background-color: #444;
+    font-family: 'IM Fell DW Pica SC', serif;
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+button {
+    color: #3D78B6;
+    font-size: 75px;
+    border-color: #444444;
+    background-color:#444444;
+}
+
+button:hover {
+    color: red;
+    font-size: 75px;
+    border-color: #444444;
+    background-color:#444444;
+}
+
+.bottom {
+    font-size: 50px;
+}
+
+h3 {
+    font-size: 30px;
+}

@@ -1,0 +1,201 @@
+const button = document.getElementById('button');
+const display = document.getElementById('display');
+
+// This is a commen. It helps a reader detirmine a reader what parts of your code do what
+// 1. List of adjectives
+
+// List of items, data = array
+const adjectives = [
+    'An Apish', 
+    'An Artless', 
+    'A Beslubbering', 
+    'A Calumniating', 
+    'A Cautelous', 
+    'A Churlish', 
+    'A Coldblooded', 
+    'A Concupiscible', 
+    'A Covetous', 
+    'A Crudy', 
+    'A Cuckoldly', 
+    'A Deceptious', 
+    'A Degenerate', 
+    'A Facinerious', 
+    'A Fawning', 
+    'A Finical', 
+    'A Fusty', 
+    'A Goatish', 
+    'A Gorbellied', 
+    'A Greasy', 
+    'A Heinous', 
+    'An Incontinent', 
+    'An Inexecrable', 
+    'An Insolent', 
+    'A Lecherous', 
+    'A Lisping', 
+    'A Loathly', 
+    'A Lubberly', 
+    'A Lumpish', 
+    'A Mammering', 
+    'A Musty', 
+    'A Naughty', 
+    'An Obscene', 
+    'An Overgorged', 
+    'A Panderly', 
+    'A Pestiferous', 
+    'A Plumpy', 
+    'A Puking', 
+    'A Rascally', 
+    'A Reeky',
+    'A Sanctimounious',
+    'A Sickly',
+    'A Slobbery',
+    'A Sneaping',
+    'A Spongy', 
+    'A Stinking',
+    'A Superserviceable',
+    'A Thrasonical',
+    'An Unhandsome',
+    'An Unwiped',
+    'A Viperous',
+    'A Wanton',
+    'A Warped',
+    'A Witless',
+
+];
+console.log(adjectives.length);
+// 3. List of second adjectives
+const adjectives2 = [
+    'Bald-Pated',
+    'Barren-Spirited',
+    'Beast-Eating',
+    'Beef-Witted',
+    'Boiled-Brains',
+    'Clay-Brained',
+    'Dirt-Rotten',
+    'Dizzy-Eyed',
+    'Dull-Brained',
+    'Eye-Offending',
+    'Fat-Kidneyed',
+    'Flap-Eared',
+    'Foul-Mouthed',
+    'Half-Blooded',
+    'Hard-Haired',
+    'Hell-Governed',
+    'Hollow-Eyed',
+    'Hook-Nosed',
+    'Ill-Tempered',
+    'Knotty-Pated',
+    'Leaden-Footed',
+    'Leptus-Leering',
+    'Lily-Livered',
+    'Logger-Headed',
+    'Lust-Breathed',
+    'Motley-Minded',
+    'Mouse-Eaten',
+    'Muddy-Mettled',
+    'Nook-Shotten',
+    'One-Trunk-Inheriting',
+    'Pale-Hearted',
+    'Pigeon-Livered',
+    'Puke-Stocking',
+    'Puppy-Headed',
+    'Rank-Scented',
+    'Rug-Headed',
+    'Rump-Fed',
+    'Self-Glorious',
+    'Senseless-Obstinate',
+    'Sheep-Biting',
+    'Shrill-Tongued',
+    'Snail-Paced',
+    'Sodden-Witted',
+    'Stretch-Mouthed',
+    'Stubborn-Hard',
+    'Swag-Bellied',
+    'Tardy-Gaited',
+    'Thick-Eyed',
+    'Three-Suited',
+    'Tripe-Visaged',
+    'Under-Honest',
+    'Uneducated',
+    'Useless',
+    'White-Livered',
+];
+// 2. List of nouns
+const nouns = [
+    'Abomination', 
+    'Arch-Villain',
+    'Baggage',
+    'Bed-presser',
+    'Blockhead',
+    'Braggart', 
+    'Bugbear',
+    'Bulls Pizzle',
+    'Codpiece',
+    'Capocchia', 
+    'Cornuto',
+    'Costermonger',
+    'Cot-Quean',
+    'Coxcomb',
+    'Cozener', 
+    'Dissembler',
+    'Dullard',
+    'Dunghill',
+    'Fashion-Monger',
+    'Fleshmonger', 
+    'Foot-Licker',
+    'Fustilarian',
+    'Geck',
+    'Giglet',
+    'Horn-Beast',
+    'Horse-Back-Breaker',
+    'Idiot-Worshipper',
+    'Jack-a-Nape', 
+    'Lewdster',
+    'Malignancy',
+    'Malmsey-Butt',
+    'Measle',
+    'Miscreant', 
+    'Mushrump',
+    'Ox-Head',
+    'Parasite',
+    'Pig-Nut',
+    'Pin-Buttock',
+    'Potato Finger',
+    'Princox',
+    'Purpose-Changer', 
+    'Quatch-Buttock',
+    'Rabbit-Sucker',
+    'Rampallian',
+    'Rat-Catcher',
+    'Ratsbane', 
+    'Renegatho',
+    'Scum',
+    'Scut',
+    'Starve-lackey',
+    'Stock-Fish',
+    'Ticklebrain',
+    'Under-Skinker',
+    'Villiago',
+];
+// 3. Generate a random pick of an adjective and noun
+// 3a. set up a function
+function random(array) {
+    // Code Block
+    return (Math.floor(Math.random() * array.length));
+};
+// 3b. Randomly pick an adjective and noun using the ranodm function
+function insult() {
+    // return "You" + " " + adjectives[random(adjectives)] + " " + nouns[random(nouns)] + "!";
+    // The following is called template literal. Part of ES6.
+    return ` ${adjectives[random(adjectives)]} ${adjectives2[random(adjectives2)]} ${nouns[random(nouns)]}`;
+};
+
+
+console.log(nouns[random(nouns)]);
+console.log(adjectives[random(adjectives)]);
+
+// 4. Display on screen
+button.addEventListener('click', function(){
+    display.innerHTML = insult();
+});
+// Light Blue first then Red
