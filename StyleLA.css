@@ -6,10 +6,10 @@ body {
     text-align: center;
 }
 button {
-    color: #ff9400;
+    color: #00b6ff;
     font-size: 75px;
-    border-color: #444444;
-    background-color:#444444;
+    border-color: #ff9400;
+    background-color:#ffd800;
 }
 
 button:hover {
